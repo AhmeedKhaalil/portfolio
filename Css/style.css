@@ -228,6 +228,9 @@ footer {
 .step p {
   color: #555;
   font-size: 15px;
+  * {
+  box-sizing: border-box;
+}
 }
 .info-item p{
     margin-left: 20px;
