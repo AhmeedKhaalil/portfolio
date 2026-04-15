@@ -63,33 +63,36 @@ h2::after {
   border-radius: 2px;
 }
 
+/* تعديل الجدول ليكون مرن وملموم */
 table {
-  width: auto;
-  min-width: 850px;
-  max-width: 95%;
+  width: 95%; /* بياخد عرض الشاشة مع ترك مسافة بسيطة */
+  max-width: 1000px;
   margin: 20px auto 50px;
   border-collapse: collapse;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   overflow: hidden;
+  table-layout: auto; /* يخلي الأعمدة تتوزع حسب الكلام */
 }
 
 th {
   background-color: #fafafa;
   color: #888;
-  font-size: 13px;
+  font-size: 12px; /* تصغير الخط شوية عشان يناسب الموبايل */
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 18px;
+  padding: 12px 8px;
   border-bottom: 1px solid #eee;
 }
 
 td {
-  padding: 16px;
+  padding: 12px 8px;
   border-bottom: 1px solid #f9f9f9;
   text-align: center;
   color: #555;
+  font-size: 14px; /* حجم خط مناسب للقراءة */
+  word-wrap: break-word; /* يخلي الكلام ينزل سطر جديد لو العمود ضيق */
 }
 
 tr:hover td {
@@ -230,10 +233,14 @@ footer {
     gap: 10px;
   }
   
+  /* في الموبايل، الجدول هيكون بملء الشاشة والكلام هيصغر شوية عشان يكفي */
   table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    width: 98%;
+    font-size: 12px;
+  }
+  
+  td, th {
+    padding: 8px 4px;
   }
 
   form {
