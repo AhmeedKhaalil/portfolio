@@ -66,28 +66,21 @@ h2::after {
 }
 
 table {
-  width: 85%;
-  max-width: 900px;
-  margin: 20px auto 50px;
+  width: 100%;
   border-collapse: collapse;
   background-color: #fff;
   border-radius: 10px;
-  overflow: hidden;
+  overflow-x: auto;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 th {
   background-color: #fafafa;
   color: #888;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 12px;
-  border-bottom: 1px solid #eee;
 }
 
 td {
-  padding: 12px;
+  padding: 15px;
   border-bottom: 1px solid #f9f9f9;
   text-align: center;
   color: #555;
@@ -232,30 +225,10 @@ footer {
 .info-item p{
     margin-left: 20px;
 }
- * {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;   
-}
-@media (max-width: 768px) {
-
-  table {
-    font-size: 12px;
-    min-width: 500px;
-     overflow-x: auto;
-  }
-
-  th, td {
-    padding: 8px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
 .table-container {
-  width: 100%;
-  overflow-x: auto;
-  padding: 10px;
+  width: 90%;
+  margin:20px auto;
+  border-radius:15px;
+  overflow: hidden;
+  rgba(0,0,0,0.1);
 }
