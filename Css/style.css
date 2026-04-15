@@ -66,21 +66,28 @@ h2::after {
 }
 
 table {
-  width: 100%;
+  width:90%;
+  max-width: 800px;
+  margin: 20px auto 50px;
   border-collapse: collapse;
   background-color: #fff;
-  border-radius: 10px;
-  overflow-x: auto;
+  border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 th {
   background-color: #fafafa;
   color: #888;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
 }
 
 td {
-  padding: 15px;
+  padding: 12px;
   border-bottom: 1px solid #f9f9f9;
   text-align: center;
   color: #555;
@@ -147,7 +154,7 @@ footer {
     gap: 15px;
   }
   table, form {
-    width: 95%;
+    width: 90%;
   }
 }
 .features {
@@ -225,10 +232,28 @@ footer {
 .info-item p{
     margin-left: 20px;
 }
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 .table-container {
-  width: 90%;
-  margin:20px auto;
-  border-radius:15px;
-  overflow: hidden;
-  rgba(0,0,0,0.1);
+  width: 100%;
+  overflow-x: auto;
+}
+@media (max-width: 768px) {
+
+  table {
+    font-size: 12px;
+    min-width: 500px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
