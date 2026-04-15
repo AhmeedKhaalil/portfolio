@@ -1,49 +1,60 @@
-body {
+ody {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f7f9;
   color: #333;
 }
+
 header {
   background-color: #fff;
   text-align: center;
   padding: 40px 20px;
   border-bottom: 1px solid #eee;
 }
+
 header h1 {
   margin: 0;
   font-weight: 400;
   color: #222;
 }
+
 nav {
   background-color: #fff;
   border-bottom: 1px solid #eee;
 }
+
 nav ul {
   list-style: none;
+  flex-direction: row;
+  gap:20px;
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 15px;
 }
+
 nav ul li {
   margin: 0 20px;
 }
+
 nav ul li a {
   color: #666;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
 }
+
 nav ul li a:hover {
   color: #000;
 }
+
 h2 {
   text-align: center;
   font-weight: 500;
   color: #444;
   margin: 40px 0 20px 0;
 }
+
 h2::after {
   content: '';
   display: block;
@@ -54,7 +65,7 @@ h2::after {
   border-radius: 2px;
 }
 table {
-  width: 85%;
+  width: 95%;
   max-width: 900px;
   margin: 20px auto 50px;
   border-collapse: collapse;
@@ -62,6 +73,7 @@ table {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  table-layout: fixed; 
 }
 
 th {
@@ -69,19 +81,23 @@ th {
   color: #888;
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 18px;
+  padding: 15px 5px; /* صغرنا المسافات الجانبية */
   border-bottom: 1px solid #eee;
 }
+
 td {
-  padding: 16px;
+  padding: 12px 5px; /* صغرنا المسافات الجانبية */
   border-bottom: 1px solid #f9f9f9;
   text-align: center;
   color: #555;
+  font-size: 13px; /* صغرنا الخط سنة */
+  word-wrap: break-word; /* عشان لو الكلمة طويلة تنزل سطر جديد */
 }
+
 tr:hover td {
   background-color: #fcfcfc;
 }
+
 form {
   width: 90%;
   max-width: 450px;
@@ -93,6 +109,7 @@ form {
   display: flex;
   flex-direction: column;
 }
+
 input, textarea {
   padding: 12px;
   margin-bottom: 15px;
@@ -102,10 +119,12 @@ input, textarea {
   outline: none;
   transition: 0.3s;
 }
+
 input:focus {
   border-color: #ddd;
   background-color: #fff;
 }
+
 button {
   background-color: #222;
   color: white;
@@ -116,9 +135,35 @@ button {
   font-weight: 600;
   transition: 0.3s;
 }
+
 button:hover {
   background-color: #444;
   transform: translateY(-1px);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #999;
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+  table {
+    width: 98%; 
+
+  th, td {
+    font-size: 11px;
+    padding: 8px 2px; 
+  }
+  form {
+    width: 95%;
+  }
 }
 .features {
   display: flex;
@@ -129,6 +174,7 @@ button:hover {
   margin: 0 auto;
   flex-wrap: wrap;
 }
+
 .feature-item {
   flex: 1;
   min-width: 250px;
@@ -139,19 +185,23 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.03);
   transition: 0.3s;
 }
+
 .feature-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
+
 .feature-item h3 {
   color: #222;
   margin-bottom: 15px;
 }
+
 .feature-item p {
   color: #777;
   font-size: 14px;
   line-height: 1.6;
 }
+
 .how-it-works {
   background-color: #fff;
   padding: 60px 20px;
@@ -182,26 +232,16 @@ button:hover {
   font-weight: bold;
   margin-bottom: 15px;
 }
+
 .step p {
   color: #555;
   font-size: 15px;
 }
-.info-item p {
-  margin-left: 20px;
+.info-item p{
+    margin-left: 20px;
 }
-footer {
-  text-align: center;
-  padding: 30px;
-  color: #999;
-  font-size: 13px;
-}
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  table, form {
-    width: 95%;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
