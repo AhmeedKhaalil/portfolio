@@ -71,7 +71,7 @@ table {
   margin: 20px auto 50px;
   border-collapse: collapse;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
@@ -242,6 +242,7 @@ footer {
   table {
     font-size: 12px;
     min-width: 500px;
+     overflow-x: auto;
   }
 
   th, td {
@@ -252,4 +253,9 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
+}
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px;
 }
